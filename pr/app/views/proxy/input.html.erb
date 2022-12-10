@@ -1,0 +1,8 @@
+<h1>Страница ввода N</h1>
+<%= form_tag("/proxy/view.x", :method => "get") do %>
+<%= label_tag("Введите число n:") %>
+<%= number_field_tag(:less_than_number, nil, min: 1) %> <br/>
+<%= select_tag(:route,options_for_select([ "server", "client" ], "server")) %> <br>
+<br/>
+<%= submit_tag("Find palindroms") %>
+<% end %>
